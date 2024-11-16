@@ -1,0 +1,5 @@
+•	report year: Year of the recorded data.
+•	race_eth_code / race_eth_name: Codes and names representing racial/ethnic groups.
+•	Geo type, geo type value, geo name: Geographic identifiers, such as county names and MPO regions.
+•	rate: Crime rate per 1,000 population.
+•	dof_population: Population count used for rate calculation.
