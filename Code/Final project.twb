@@ -1,0 +1,978 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='ViolentCrime+ (hci_crime_752_pl_co_re_ca_2000-2013_21oct15-ada (1))' inline='true' name='federated.1o9d7rr049wf9w15sokyc0xlugkn' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='hci_crime_752_pl_co_re_ca_2000-2013_21oct15-ada (1)' name='excel-direct.1yw86iq1l9tnf7108200o0bduru7'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' filename='/Users/allisonramirezaguilar/Desktop/hci_crime_752_pl_co_re_ca_2000-2013_21oct15-ada.xlsx' interpretationMode='1' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.1yw86iq1l9tnf7108200o0bduru7' name='ViolentCrime' table='[ViolentCrime$]' type='table'>
+            <columns gridOrigin='A1:AA10001:no:A1:AA2147483647:1' header='yes' lost='0' outcome='1' processed='122908'>
+              <column datatype='integer' name='ind_id' ordinal='0' />
+              <column datatype='string' name='ind_definition' ordinal='1' />
+              <column datatype='integer' name='reportyear' ordinal='2' />
+              <column datatype='integer' name='race_eth_code' ordinal='3' />
+              <column datatype='string' name='race_eth_name' ordinal='4' />
+              <column datatype='string' name='geotype' ordinal='5' />
+              <column datatype='integer' name='geotypevalue' ordinal='6' />
+              <column datatype='string' name='geoname' ordinal='7' />
+              <column datatype='integer' name='county_fips' ordinal='8' />
+              <column datatype='string' name='county_name' ordinal='9' />
+              <column datatype='integer' name='region_code' ordinal='10' />
+              <column datatype='string' name='region_name' ordinal='11' />
+              <column datatype='integer' name='strata_name_code' ordinal='12' />
+              <column datatype='string' name='strata_name' ordinal='13' />
+              <column datatype='integer' name='strata_level_name_code' ordinal='14' />
+              <column datatype='string' name='strata_level_name' ordinal='15' />
+              <column datatype='integer' name='numerator' ordinal='16' />
+              <column datatype='boolean' name='denominator' ordinal='17' />
+              <column datatype='real' name='rate' ordinal='18' />
+              <column datatype='real' name='ll_95ci' ordinal='19' />
+              <column datatype='real' name='ul_95ci' ordinal='20' />
+              <column datatype='real' name='se' ordinal='21' />
+              <column datatype='real' name='rse' ordinal='22' />
+              <column datatype='integer' name='ca_decile' ordinal='23' />
+              <column datatype='real' name='ca_rr' ordinal='24' />
+              <column datatype='integer' name='dof_population' ordinal='25' />
+              <column datatype='datetime' name='version' ordinal='26' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.1yw86iq1l9tnf7108200o0bduru7' name='MPO_CountyList' table='[MPO_CountyList$]' type='table'>
+            <columns gridOrigin='A1:D61:no:A1:D61:1' lost='0' outcome='1' processed='116'>
+              <column datatype='integer' name='County_FIPS' ordinal='0' />
+              <column datatype='string' name='County' ordinal='1' />
+              <column datatype='string' name='MPO Region' ordinal='2' />
+              <column datatype='integer' name='MPO_Region_code' ordinal='3' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>3</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AA10001:no:A1:AA2147483647:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>122908</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[MPO_CountyList]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:D61:no:A1:D61:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>116</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ind_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ind_id]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ind_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ind_definition</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[ind_definition]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ind_definition</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reportyear</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[reportyear]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>reportyear</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>race_eth_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[race_eth_code]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>race_eth_code</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>race_eth_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[race_eth_name]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>race_eth_name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geotype</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[geotype]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>geotype</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geotypevalue</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[geotypevalue]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>geotypevalue</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>geoname</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[geoname]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>geoname</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_fips</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[county_fips]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>county_fips</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>county_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[county_name]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>county_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[region_code]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>region_code</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region_name]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>region_name</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strata_name_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[strata_name_code]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>strata_name_code</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strata_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[strata_name]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>strata_name</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strata_level_name_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[strata_level_name_code]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>strata_level_name_code</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>strata_level_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[strata_level_name]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>strata_level_name</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>numerator</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[numerator]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>numerator</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>denominator</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[denominator]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>denominator</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rate]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>rate</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ll_95ci</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ll_95ci]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ll_95ci</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ul_95ci</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ul_95ci]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ul_95ci</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>se</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[se]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>se</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rse</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[rse]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>rse</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ca_decile</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ca_decile]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ca_decile</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ca_rr</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ca_rr]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>ca_rr</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dof_population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[dof_population]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>dof_population</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>version</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[version]</local-name>
+            <parent-name>[ViolentCrime]</parent-name>
+            <remote-alias>version</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County_FIPS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[County_FIPS]</local-name>
+            <parent-name>[MPO_CountyList]</parent-name>
+            <remote-alias>County_FIPS</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[MPO_CountyList]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MPO Region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[MPO Region]</local-name>
+            <parent-name>[MPO_CountyList]</parent-name>
+            <remote-alias>MPO Region</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MPO_Region_code</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MPO_Region_code]</local-name>
+            <parent-name>[MPO_CountyList]</parent-name>
+            <remote-alias>MPO_Region_code</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='County FIPS' datatype='integer' name='[County_FIPS]' role='measure' type='quantitative' />
+      <column caption='MPO Region code' datatype='integer' name='[MPO_Region_code]' role='dimension' type='ordinal' />
+      <column caption='MPO_CountyList' datatype='table' name='[__tableau_internal_object_id__].[MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75]' role='measure' type='quantitative' />
+      <column caption='ViolentCrime' datatype='table' name='[__tableau_internal_object_id__].[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]' role='measure' type='quantitative' />
+      <column caption='Ca Decile' datatype='integer' name='[ca_decile]' role='measure' type='quantitative' />
+      <column caption='Ca Rr' datatype='real' name='[ca_rr]' role='measure' type='quantitative' />
+      <column caption='County Fips' datatype='integer' name='[county_fips]' role='dimension' semantic-role='[County].[Name]' type='ordinal' />
+      <column caption='County Name' datatype='string' name='[county_name]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Denominator' datatype='boolean' name='[denominator]' role='dimension' type='nominal' />
+      <column caption='Dof Population' datatype='integer' name='[dof_population]' role='measure' type='quantitative' />
+      <column caption='Geoname' datatype='string' name='[geoname]' role='dimension' type='nominal' />
+      <column caption='Geotype' datatype='string' name='[geotype]' role='dimension' type='nominal' />
+      <column caption='Geotypevalue' datatype='integer' name='[geotypevalue]' role='dimension' type='ordinal' />
+      <column caption='Ind Definition' datatype='string' name='[ind_definition]' role='dimension' type='nominal' />
+      <column caption='Ind Id' datatype='integer' name='[ind_id]' role='dimension' type='ordinal' />
+      <column caption='Ll 95Ci' datatype='real' name='[ll_95ci]' role='measure' type='quantitative' />
+      <column caption='Numerator' datatype='integer' name='[numerator]' role='measure' type='quantitative' />
+      <column caption='Race Eth Code' datatype='integer' name='[race_eth_code]' role='dimension' type='ordinal' />
+      <column caption='Race Eth Name' datatype='string' name='[race_eth_name]' role='dimension' type='nominal' />
+      <column caption='Rate' datatype='real' name='[rate]' role='measure' type='quantitative' />
+      <column caption='Region Code' datatype='integer' name='[region_code]' role='dimension' type='ordinal' />
+      <column caption='Region Name' datatype='string' name='[region_name]' role='dimension' type='nominal' />
+      <column caption='Reportyear' datatype='integer' name='[reportyear]' role='dimension' type='ordinal' />
+      <column caption='Rse' datatype='real' name='[rse]' role='measure' type='quantitative' />
+      <column caption='Se' datatype='real' name='[se]' role='measure' type='quantitative' />
+      <column aggregation='CountD' caption='Strata Level Name' datatype='string' name='[strata_level_name]' role='dimension' type='nominal' />
+      <column caption='Strata Level Name Code' datatype='integer' name='[strata_level_name_code]' role='dimension' type='ordinal' />
+      <column caption='Strata Name' datatype='string' name='[strata_name]' role='dimension' type='nominal' />
+      <column caption='Strata Name Code' datatype='integer' name='[strata_name_code]' role='dimension' type='ordinal' />
+      <column caption='Ul 95Ci' datatype='real' name='[ul_95ci]' role='measure' type='quantitative' />
+      <column caption='Version' datatype='datetime' name='[version]' role='dimension' type='ordinal' />
+      <column-instance column='[strata_level_name]' derivation='None' name='[none:strata_level_name:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:strata_level_name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Aggravated assault&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Robbery&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Murder and non-negligent manslaughter&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Jurisdiction does not report&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;Violent crime total&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Forcible rape&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='MPO_CountyList' id='MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75'>
+            <properties context=''>
+              <relation connection='excel-direct.1yw86iq1l9tnf7108200o0bduru7' name='MPO_CountyList' table='[MPO_CountyList$]' type='table'>
+                <columns gridOrigin='A1:D61:no:A1:D61:1' lost='0' outcome='1' processed='116'>
+                  <column datatype='integer' name='County_FIPS' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='MPO Region' ordinal='2' />
+                  <column datatype='integer' name='MPO_Region_code' ordinal='3' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='ViolentCrime' id='ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414'>
+            <properties context=''>
+              <relation connection='excel-direct.1yw86iq1l9tnf7108200o0bduru7' name='ViolentCrime' table='[ViolentCrime$]' type='table'>
+                <columns gridOrigin='A1:AA10001:no:A1:AA2147483647:1' header='yes' lost='0' outcome='1' processed='122908'>
+                  <column datatype='integer' name='ind_id' ordinal='0' />
+                  <column datatype='string' name='ind_definition' ordinal='1' />
+                  <column datatype='integer' name='reportyear' ordinal='2' />
+                  <column datatype='integer' name='race_eth_code' ordinal='3' />
+                  <column datatype='string' name='race_eth_name' ordinal='4' />
+                  <column datatype='string' name='geotype' ordinal='5' />
+                  <column datatype='integer' name='geotypevalue' ordinal='6' />
+                  <column datatype='string' name='geoname' ordinal='7' />
+                  <column datatype='integer' name='county_fips' ordinal='8' />
+                  <column datatype='string' name='county_name' ordinal='9' />
+                  <column datatype='integer' name='region_code' ordinal='10' />
+                  <column datatype='string' name='region_name' ordinal='11' />
+                  <column datatype='integer' name='strata_name_code' ordinal='12' />
+                  <column datatype='string' name='strata_name' ordinal='13' />
+                  <column datatype='integer' name='strata_level_name_code' ordinal='14' />
+                  <column datatype='string' name='strata_level_name' ordinal='15' />
+                  <column datatype='integer' name='numerator' ordinal='16' />
+                  <column datatype='boolean' name='denominator' ordinal='17' />
+                  <column datatype='real' name='rate' ordinal='18' />
+                  <column datatype='real' name='ll_95ci' ordinal='19' />
+                  <column datatype='real' name='ul_95ci' ordinal='20' />
+                  <column datatype='real' name='se' ordinal='21' />
+                  <column datatype='real' name='rse' ordinal='22' />
+                  <column datatype='integer' name='ca_decile' ordinal='23' />
+                  <column datatype='real' name='ca_rr' ordinal='24' />
+                  <column datatype='integer' name='dof_population' ordinal='25' />
+                  <column datatype='datetime' name='version' ordinal='26' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[county_fips]' />
+              <expression op='[County_FIPS]' />
+            </expression>
+            <first-end-point object-id='ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414' />
+            <second-end-point object-id='MPO!CountyList_68E13D601DE4446D94C7B5953FB2EB75' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Q1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='ViolentCrime+ (hci_crime_752_pl_co_re_ca_2000-2013_21oct15-ada (1))' name='federated.1o9d7rr049wf9w15sokyc0xlugkn' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1o9d7rr049wf9w15sokyc0xlugkn'>
+            <column caption='ViolentCrime' datatype='table' name='[__tableau_internal_object_id__].[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rate]' derivation='Avg' name='[avg:rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[region_name]' derivation='None' name='[none:region_name:nk]' pivot='key' type='nominal' />
+            <column-instance column='[reportyear]' derivation='None' name='[none:reportyear:ok]' pivot='key' type='ordinal' />
+            <column caption='Rate' datatype='real' name='[rate]' role='measure' type='quantitative' />
+            <column caption='Region Name' datatype='string' name='[region_name]' role='dimension' type='nominal' />
+            <column caption='Reportyear' datatype='integer' name='[reportyear]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:region_name:nk]'>
+            <groupfilter function='member' level='[none:region_name:nk]' member='&quot;Shasta&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:region_name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1o9d7rr049wf9w15sokyc0xlugkn].[__tableau_internal_object_id__].[cnt:ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1o9d7rr049wf9w15sokyc0xlugkn].[avg:rate:qk]</rows>
+        <cols>[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:reportyear:ok]</cols>
+      </table>
+      <simple-id uuid='{E585A00D-B34E-4055-9752-33C993FB4C6B}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Q1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:region_name:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1o9d7rr049wf9w15sokyc0xlugkn].[__tableau_internal_object_id__].[cnt:ViolentCrime_5B7A790F9F1842FEB50015EAE3F17414:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:region_name:nk]</field>
+            <field>[federated.1o9d7rr049wf9w15sokyc0xlugkn].[none:reportyear:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6C7520D0-30E2-4219-A992-38C3CC54D7D1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Q1' width='384'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
